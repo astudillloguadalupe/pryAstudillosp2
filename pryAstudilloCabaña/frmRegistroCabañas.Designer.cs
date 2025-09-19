@@ -81,7 +81,8 @@
             cmbDías.Location = new Point(448, 45);
             cmbDías.Name = "cmbDías";
             cmbDías.Size = new Size(147, 23);
-            cmbDías.TabIndex = 8;
+            cmbDías.TabIndex = 2;
+            cmbDías.SelectedIndexChanged += cmbDías_SelectedIndexChanged;
             // 
             // lblDías
             // 
@@ -100,7 +101,7 @@
             cmbPersonas.Location = new Point(260, 45);
             cmbPersonas.Name = "cmbPersonas";
             cmbPersonas.Size = new Size(147, 23);
-            cmbPersonas.TabIndex = 6;
+            cmbPersonas.TabIndex = 1;
             cmbPersonas.SelectedIndexChanged += cmbPersonas_SelectedIndexChanged;
             // 
             // lblPersonas
@@ -121,7 +122,7 @@
             cmbTipo.Location = new Point(45, 45);
             cmbTipo.Name = "cmbTipo";
             cmbTipo.Size = new Size(147, 23);
-            cmbTipo.TabIndex = 5;
+            cmbTipo.TabIndex = 0;
             cmbTipo.SelectedIndexChanged += cmbTipo_SelectedIndexChanged;
             // 
             // lblTipoCabaña
@@ -139,7 +140,7 @@
             grbAdicionales.Location = new Point(12, 131);
             grbAdicionales.Name = "grbAdicionales";
             grbAdicionales.Size = new Size(159, 108);
-            grbAdicionales.TabIndex = 0;
+            grbAdicionales.TabIndex = 1;
             grbAdicionales.TabStop = false;
             grbAdicionales.Text = "Adicionales";
             // 
@@ -152,7 +153,7 @@
             chkAdicionales.Location = new Point(17, 31);
             chkAdicionales.Name = "chkAdicionales";
             chkAdicionales.Size = new Size(120, 54);
-            chkAdicionales.TabIndex = 3;
+            chkAdicionales.TabIndex = 0;
             // 
             // grbPago
             // 
@@ -163,7 +164,7 @@
             grbPago.Location = new Point(214, 139);
             grbPago.Name = "grbPago";
             grbPago.Size = new Size(415, 100);
-            grbPago.TabIndex = 0;
+            grbPago.TabIndex = 2;
             grbPago.TabStop = false;
             grbPago.Text = "Tipo de pago";
             // 
@@ -173,7 +174,7 @@
             label1.Location = new Point(194, 50);
             label1.Name = "label1";
             label1.Size = new Size(46, 15);
-            label1.TabIndex = 5;
+            label1.TabIndex = 0;
             label1.Text = "Tarjetas";
             // 
             // cmbTarjetas
@@ -184,7 +185,7 @@
             cmbTarjetas.Location = new Point(194, 68);
             cmbTarjetas.Name = "cmbTarjetas";
             cmbTarjetas.Size = new Size(199, 23);
-            cmbTarjetas.TabIndex = 6;
+            cmbTarjetas.TabIndex = 2;
             // 
             // optTarjeta
             // 
@@ -192,10 +193,11 @@
             optTarjeta.Location = new Point(15, 48);
             optTarjeta.Name = "optTarjeta";
             optTarjeta.Size = new Size(59, 19);
-            optTarjeta.TabIndex = 3;
+            optTarjeta.TabIndex = 1;
             optTarjeta.TabStop = true;
             optTarjeta.Text = "Tarjeta";
             optTarjeta.UseVisualStyleBackColor = true;
+            optTarjeta.CheckedChanged += optTarjeta_CheckedChanged;
             // 
             // optEfectivo
             // 
@@ -203,7 +205,7 @@
             optEfectivo.Location = new Point(15, 23);
             optEfectivo.Name = "optEfectivo";
             optEfectivo.Size = new Size(67, 19);
-            optEfectivo.TabIndex = 4;
+            optEfectivo.TabIndex = 0;
             optEfectivo.TabStop = true;
             optEfectivo.Text = "Efectivo";
             optEfectivo.UseVisualStyleBackColor = true;
@@ -217,7 +219,7 @@
             grbTitularReserva.Location = new Point(18, 272);
             grbTitularReserva.Name = "grbTitularReserva";
             grbTitularReserva.Size = new Size(617, 100);
-            grbTitularReserva.TabIndex = 0;
+            grbTitularReserva.TabIndex = 3;
             grbTitularReserva.TabStop = false;
             grbTitularReserva.Text = "Titular de la Reserva";
             // 
@@ -244,15 +246,15 @@
             txtNombre.Location = new Point(124, 27);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(253, 23);
-            txtNombre.TabIndex = 11;
+            txtNombre.TabIndex = 0;
             // 
             // mtbTelefono
             // 
             mtbTelefono.Location = new Point(124, 63);
-            mtbTelefono.Mask = "351-000-0000";
+            mtbTelefono.Mask = "000-000-0000";
             mtbTelefono.Name = "mtbTelefono";
             mtbTelefono.Size = new Size(253, 23);
-            mtbTelefono.TabIndex = 12;
+            mtbTelefono.TabIndex = 1;
             mtbTelefono.MaskInputRejected += mtbTelefono_MaskInputRejected;
             // 
             // lblNombremal
@@ -269,7 +271,7 @@
             btnCancelar.Location = new Point(435, 389);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 23);
-            btnCancelar.TabIndex = 0;
+            btnCancelar.TabIndex = 5;
             btnCancelar.Text = "&Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
@@ -279,7 +281,7 @@
             btnRegistrar.Location = new Point(526, 389);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new Size(75, 23);
-            btnRegistrar.TabIndex = 1;
+            btnRegistrar.TabIndex = 4;
             btnRegistrar.Text = "&Registrar";
             btnRegistrar.UseVisualStyleBackColor = true;
             // 
@@ -307,6 +309,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Location = new Point(456, 451);
             Name = "frmRegistroCabañas";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Reserva de Cabañas";
             Load += frmRegistroCabañas_Load;
             grbTipoCabañas.ResumeLayout(false);
