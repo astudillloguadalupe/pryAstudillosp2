@@ -278,12 +278,14 @@
             // 
             // btnRegistrar
             // 
+            btnRegistrar.Enabled = false;
             btnRegistrar.Location = new Point(526, 389);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new Size(75, 23);
             btnRegistrar.TabIndex = 4;
             btnRegistrar.Text = "&Registrar";
             btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
             // lstRegistro
             // 

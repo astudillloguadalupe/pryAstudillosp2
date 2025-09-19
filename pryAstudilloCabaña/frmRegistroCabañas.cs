@@ -211,7 +211,11 @@ namespace pryAstudilloCabaña
 
 
         }
-    
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            CalcularTotal();    
+        }
     }
 }
 
