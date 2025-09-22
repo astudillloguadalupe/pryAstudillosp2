@@ -180,12 +180,14 @@
             // cmbTarjetas
             // 
             cmbTarjetas.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbTarjetas.Enabled = false;
             cmbTarjetas.FormattingEnabled = true;
             cmbTarjetas.Items.AddRange(new object[] { "Card Red", "Card Green", "Card Blue" });
             cmbTarjetas.Location = new Point(194, 68);
             cmbTarjetas.Name = "cmbTarjetas";
             cmbTarjetas.Size = new Size(199, 23);
             cmbTarjetas.TabIndex = 2;
+            cmbTarjetas.SelectedIndexChanged += cmbTarjetas_SelectedIndexChanged;
             // 
             // optTarjeta
             // 
@@ -209,6 +211,7 @@
             optEfectivo.TabStop = true;
             optEfectivo.Text = "Efectivo";
             optEfectivo.UseVisualStyleBackColor = true;
+            optEfectivo.CheckedChanged += optEfectivo_CheckedChanged;
             // 
             // grbTitularReserva
             // 
@@ -308,6 +311,7 @@
             Controls.Add(grbPago);
             Controls.Add(grbAdicionales);
             Controls.Add(grbTipoCabañas);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Location = new Point(456, 451);
             Name = "frmRegistroCabañas";

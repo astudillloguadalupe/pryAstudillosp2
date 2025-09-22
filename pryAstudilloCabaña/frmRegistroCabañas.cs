@@ -64,9 +64,7 @@ namespace pryAstudilloCabaña
         private void cmbPersonas_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            {
 
-            }
         }
 
         private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
@@ -203,18 +201,31 @@ namespace pryAstudilloCabaña
             lstRegistro.Items.Add("Tipo de Cabaña: " + cmbTipo.SelectedItem);
             lstRegistro.Items.Add("Personas: " + cmbPersonas.SelectedItem);
             lstRegistro.Items.Add("Días: " + cmbDías.SelectedItem);
-            lstRegistro.Items.Add("Adicionales: " + Adicionales);
+            // Adicionales en comas
+            string adicionales = string.Join(", ", chkAdicionales.CheckedItems.Cast<string>());
+            lstRegistro.Items.Add("Adicionales: " + adicionales);
             lstRegistro.Items.Add("Forma de pago: " + FormaPago);
             lstRegistro.Items.Add("Recargo: " + Recargo);
             lstRegistro.Items.Add("Precio diario: U$S " + PrecioDia);
             lstRegistro.Items.Add("Precio total: U$S " + PrecioTotal);
 
 
+
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            CalcularTotal();    
+            CalcularTotal();
+        }
+
+        private void cmbTarjetas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void optEfectivo_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
