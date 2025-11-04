@@ -17,7 +17,22 @@ namespace pryAstudilloCabaña
             InitializeComponent();
         }
 
+        struct RegistroCabaña
+        {
+            public string Nombre;
+            public string Telefono;
+            public string Tipo;
+            public int Personas;
+            public int Dias;
+            public string Adicionales;
+            public string FormaPago;
+            public decimal PrecioTotal;
+            public decimal Recargo;
+            public decimal PrecioDia;
+        }
 
+        private RegistroCabaña[] registros = new RegistroCabaña[20];
+        private int Contador = 0;
         private void LimpiarControles()
         {
             txtNombre.Clear();
@@ -209,10 +224,24 @@ namespace pryAstudilloCabaña
             lstRegistro.Items.Add("Precio diario: U$S " + PrecioDia);
             lstRegistro.Items.Add("Precio total: U$S " + PrecioTotal);
 
+            registros[Contador]= new RegistroCabaña
+            {
+                Nombre = txtNombre.Text,
+                Telefono = mtbTelefono.Text,
+                Tipo = cmbTipo.SelectedItem.ToString(),
+                Personas = Personas,
+                Dias = Dias,
+                Adicionales = adicionales,
+                FormaPago = FormaPago,
+                PrecioTotal = PrecioTotal,
+                Recargo = (PrecioTotal - (PrecioDia * Dias)),
+                PrecioDia = PrecioDia
+            };
 
-
+            Contador++;
         }
-
+        
+        
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             CalcularTotal();

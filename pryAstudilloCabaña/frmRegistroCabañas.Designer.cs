@@ -130,7 +130,7 @@
             lblTipoCabaña.AutoSize = true;
             lblTipoCabaña.Location = new Point(6, 48);
             lblTipoCabaña.Name = "lblTipoCabaña";
-            lblTipoCabaña.Size = new Size(33, 15);
+            lblTipoCabaña.Size = new Size(34, 15);
             lblTipoCabaña.TabIndex = 4;
             lblTipoCabaña.Text = "Tipo ";
             // 
@@ -173,7 +173,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(194, 50);
             label1.Name = "label1";
-            label1.Size = new Size(46, 15);
+            label1.Size = new Size(47, 15);
             label1.TabIndex = 0;
             label1.Text = "Tarjetas";
             // 
@@ -194,7 +194,7 @@
             optTarjeta.AutoSize = true;
             optTarjeta.Location = new Point(15, 48);
             optTarjeta.Name = "optTarjeta";
-            optTarjeta.Size = new Size(59, 19);
+            optTarjeta.Size = new Size(60, 19);
             optTarjeta.TabIndex = 1;
             optTarjeta.TabStop = true;
             optTarjeta.Text = "Tarjeta";
@@ -240,7 +240,7 @@
             lblTélefono.AutoSize = true;
             lblTélefono.Location = new Point(17, 71);
             lblTélefono.Name = "lblTélefono";
-            lblTélefono.Size = new Size(52, 15);
+            lblTélefono.Size = new Size(53, 15);
             lblTélefono.TabIndex = 9;
             lblTélefono.Text = "Télefono";
             // 
